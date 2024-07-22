@@ -86,13 +86,37 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #eee;
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .sub {
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+}
+
+footer {
+  background-color: #eee;
+  padding: 1rem 2rem;
+  text-align: center;
 }
 
 a {

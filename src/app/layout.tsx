@@ -16,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav>
+          <div className="title">UC IRVINE INSTITUTE OF TRANSPORTATION ENGINEERS</div>
+          <div className="sub">site in construction</div>
+        </nav>
+        <main>{children}</main>
+        <footer>footer</footer>
+      </body>
     </html>
   );
 }
