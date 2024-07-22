@@ -111,6 +111,12 @@ nav {
     font-size: 1.25rem;
     font-style: italic;
   }
+  .nav-items {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  
+  }
 }
 
 footer {
