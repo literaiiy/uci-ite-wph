@@ -24,7 +24,7 @@ export default async function RootLayout({
           <div className="title">UC IRVINE INSTITUTE OF TRANSPORTATION ENGINEERS</div>
           <div className="sub">site in construction</div>
           <div className="nav-items">
-            {pages.map((page) => (
+            {pages.map((page: any) => (
               <a key={page.slug} href={`/${page.slug}`}>
                 {page.title.rendered}
               </a>
