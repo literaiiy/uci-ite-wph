@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.scss";
 import { getPages } from "@/lib/api";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const defaultFont = Noto_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,12 +20,10 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={defaultFont.className}>
         <Nav />
         <main>{children}</main>
-        <footer>
-          Copyright © {new Date().getFullYear()} UC Irvine Institute of Transportation Engineers. Powered by Next.js and WordPress.
-        </footer>
+        <Footer />
       </body>
     </html>
   );

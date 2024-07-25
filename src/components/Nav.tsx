@@ -12,7 +12,7 @@ export default async function Nav() {
         <Image alt="UCI ITE logo" src="/anteater.svg" width={111} height={65}/>
         <span className="ite">ite</span>
       </a>
-      <div className="sub">site in construction</div>
+      <div className="sub">Institute of Transportation Engineers at the University of California, Irvine</div>
       <div className="nav-items">
         {pages.map((page: any) => (
           <a key={page.slug} href={`/${page.slug}`}>
