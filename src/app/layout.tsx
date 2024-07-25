@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { getPages } from "@/utils/api";
+import "./globals.scss";
+import { getPages } from "@/lib/api";
+import Nav from "@/components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,24 +16,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pages = await getPages();
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <div className="title">UC IRVINE INSTITUTE OF TRANSPORTATION ENGINEERS</div>
-          <div className="sub">site in construction</div>
-          <div className="nav-items">
-            {pages.map((page: any) => (
-              <a key={page.slug} href={`/${page.slug}`}>
-                {page.title.rendered}
-              </a>
-            ))}
-          </div>
-        </nav>
+        <Nav />
         <main>{children}</main>
-        <footer>footer</footer>
+        <footer>
+          Copyright © {new Date().getFullYear()} UC Irvine Institute of Transportation Engineers. Powered by Next.js and WordPress.
+        </footer>
       </body>
     </html>
   );
