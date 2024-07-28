@@ -1,6 +1,7 @@
 // variables
 $uci-yellow: #fbd30b;
 $uci-blue: #0e5682;
+$header-col: #00000010;
 
 // dark mode
 @media (prefers-color-scheme: dark) {
@@ -78,6 +79,10 @@ main {
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Figtree";
+  font-weight: 700;
+}
 
 
 a {
