@@ -1,19 +1,67 @@
+@import "../app/globals.scss";
+
 footer {
   font-size: 0.875rem;
   width: 100%;
   background-color: #eee;
-  padding: 1rem 2rem;
+  // padding: 1rem 2rem;
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  // flex-direction: row;
   justify-content: space-around;
   align-items: start;
-  gap: 2rem;
   & > div {
-
+    padding: 1rem;
   }
 }
 
-.address {
+.info {
+  width: 100%;
   text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  // columns
+  & > .address {
+
+  }
+  & > .info-col {
+    display: flex;
+    flex-direction: column;
+    & > ul {
+      list-style-type: none;
+      & > li {
+        // margin-bottom: .5rem;
+      }
+    }
+  }
+  & > .socials {
+    & > .footer-logo {
+      font-family: "Neue Kabel EB";
+      color: $uci-gray;
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: flex;
+      flex-direction: row;
+      gap: .7rem;
+      align-items: center;
+      text-decoration: none;
+    }
+  }
+}
+
+.copyright {
+  color: white;
+  background-color: $uci-blue;
+  width: 100%;
+  & a {
+    color: $uci-yellow;
+    text-decoration: none;
+  }
 }
