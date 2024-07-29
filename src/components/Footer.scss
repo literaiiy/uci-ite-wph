@@ -9,15 +9,15 @@ footer {
   display: flex;
   flex-direction: column;
   // flex-direction: row;
-  justify-content: space-around;
-  align-items: start;
+  // justify-content: center;
+  align-items: center;
   & > div {
     padding: 1rem;
   }
 }
 
 .info {
-  width: 100%;
+  width: min(100%, $main-max);
   text-align: left;
   display: flex;
   flex-direction: row;

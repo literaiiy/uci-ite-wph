@@ -1,5 +1,6 @@
 import { getPageBySlug, getPages } from "@/lib/api"
 import Head from "next/head";
+import "../wp.scss"
 import { Metadata } from "next";
 
 export default async function Page({ params }: { params: { page: string } }) {

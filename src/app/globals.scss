@@ -5,6 +5,7 @@ $uci-gray: #999998;
 $header-col: #00000010;
 // $subheader-col: #00000010;
 $text-col: #181818;
+$main-max: 70rem;
 
 // dark mode
 @media (prefers-color-scheme: dark) {
@@ -84,7 +85,7 @@ body {
 main {
   flex: 1;
   padding: 1rem;
-  max-width: min(95vw, 60rem);
+  max-width: min(95vw, $main-max);
   width: 100%;
 }
 
@@ -104,5 +105,3 @@ a {
     // border-radius: 0.25rem;
   }
 }
-
-// wordpress

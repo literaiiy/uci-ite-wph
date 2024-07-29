@@ -19,7 +19,11 @@ export default async function Nav() {
       {/* <div className="sub">Institute of Transportation Engineers at the University of California, Irvine</div> */}
       <div className="nav-items">
         {pages.map((page: any) => (
-          <a key={page.slug} href={`/${page.slug}`}>
+          <a 
+            key={page.slug}
+            href={`/${page.slug}`}
+            // className={page.slug === pn.split("/")[-1] ? "selected" : ""}
+          >
             {page.title.rendered}
           </a>
         ))}
