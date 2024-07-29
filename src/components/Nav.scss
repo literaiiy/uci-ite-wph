@@ -6,9 +6,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem 0 2rem;
-  background-color: $header-col;
-  gap: 0.5rem;
 }
 
 .sub {
@@ -24,6 +21,9 @@ nav {
   font-weight: 700;
   text-transform: uppercase;
   display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $header-col;
 
   transition: 0.2s ease-in-out;
   & > a {
@@ -36,16 +36,26 @@ nav {
 }
 
 // uci ite logo
+.logo-wrapper {
+  background-color: $uci-blue;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .logo {
+  display: flex;
+  gap: .6rem;
   font-size: 3rem;
   font-weight: 700;
   font-family: "Neue Kabel EB";
-  display: flex;
   flex-direction: row;
-  gap: .6rem;
-  // justify-content: center;
-  align-items: center;
   text-decoration: none;
+  &:hover {
+    background: none;
+  }
 }
 
 .uci {
@@ -59,7 +69,7 @@ nav {
 }
 
 .ite {
-  color: $uci-blue;
+  color: white;
   text-decoration: underline dashed;
-  text-decoration-color: $uci-blue;
+  text-decoration-color: white;
 }

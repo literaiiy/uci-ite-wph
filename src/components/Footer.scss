@@ -75,11 +75,10 @@ footer {
 }
 
 .copyright {
-  color: white;
-  background-color: $uci-blue;
+  background-color: $header-col;
   width: 100%;
-  & a {
-    color: $uci-yellow;
-    text-decoration: none;
-  }
+  // & a {
+  //   color: $uci-yellow;
+  //   text-decoration: none;
+  // }
 }

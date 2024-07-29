@@ -3,6 +3,8 @@ $uci-yellow: #fbd30b;
 $uci-blue: #0e5682;
 $uci-gray: #999998;
 $header-col: #00000010;
+// $subheader-col: #00000010;
+$text-col: #181818;
 
 // dark mode
 @media (prefers-color-scheme: dark) {
@@ -76,6 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: $text-col;
 }
 
 main {
