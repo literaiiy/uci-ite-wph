@@ -26,7 +26,6 @@ const Carousel: React.FC<Props> = ({media}) => {
           <span className="caption">
             <span className="title">{
               decodeHtml(med[1]).replace("<p>", "").replace("</p>", "")
-              // new JSDOM().parseFromString(med[1], "text/html").body.textContent  
             }</span>
             <span className="location">{getLocationFromDesc(med[2])}</span>
           </span>
@@ -43,7 +42,7 @@ const getLocationFromDesc = (desc: string): string => {
   return start != -1 ? desc.slice(start + 2, end) : "";
 }
 
-const decodeHtml = (html) => {
+const decodeHtml = (html: string) => {
   const txt = document.createElement("textarea");
   txt.innerHTML = html;
   return txt.value;
