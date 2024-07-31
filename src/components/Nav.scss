@@ -9,14 +9,22 @@ nav {
 }
 
 .sub {
-  font-family: "Overpass";
-  font-size: 1rem;
-  font-weight: 700;
+  color: white;
+  font-family: $header-font;
+  font-size: 0.9375rem;
+  font-weight: 600;
   // text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  & > .em {
+    color: $uci-yellow;
+    font-weight: 800;
+  }
 }
 
 .nav-items {
-  font-family: "Overpass";
+  font-family: $header-font;
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -40,9 +48,28 @@ nav {
   background-color: $uci-blue;
   padding: 1rem 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
+  & > .join-button {
+    position: absolute;
+    color: black;
+    font-family: $header-font;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: 3px solid $uci-yellow-dark;
+    padding: 0.75rem 1.25rem;
+    background-color: $uci-yellow;
+    right: 1.25rem;
+    &:hover {
+      background-color: $uci-yellow-dark;
+      // border-color: white;
+      color: white;
+    }
+  }
 }
 
 .logo {

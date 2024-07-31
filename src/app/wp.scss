@@ -5,6 +5,15 @@ h1 {
   color: $uci-blue;
   font-size: 2rem;
   font-weight: 900;
+  line-height: 3rem;
+}
+
+h2 {
+  line-height: 2.5rem;;
+}
+
+h3 {
+  line-height: 2rem;
 }
 
 hr {
@@ -20,3 +29,34 @@ img {
   display: block;
   max-width: 100%;
 }
+
+figure.wp-block-gallery-2 {
+  width: 100px;
+  height: 100px;
+}
+
+// homepage carousel
+// div.wp-block-coblocks-gallery-carousel > div > div > .swiper-wrapper {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 1rem;
+//   position: static;
+//   flex-wrap: wrap;
+//   height: auto;
+//   width: auto;
+//   & > .swiper-slide {
+//     & > div > figure { // image
+//       max-height: 300px;
+//       & > img {
+//         max-width: 300px;
+//         object-fit: contain;
+//       }
+//     }
+//     & > div > figcaption { // caption
+//       font-size: 0.875rem;
+//       font-weight: 700;
+//       text-transform: uppercase;
+//       color: $uci-blue;
+//     }
+//   }
+// }

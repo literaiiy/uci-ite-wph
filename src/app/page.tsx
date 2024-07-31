@@ -1,18 +1,22 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Carousel from "@/components/Carousel";
 import "./wp.scss"
-import { getPageBySlug } from "@/lib/api";
+import { getPageBySlug, getSpecificMedia } from "@/lib/api";
 
 export default async function Home() {
-  const page = await getPageBySlug("frontpage");
+  const page: object[] = await getPageBySlug("frontpage");
+  // @ts-ignore
+  let pageHtml: string = page[0].content.rendered;
+  const carouselMedia: [string, string, string][] = await getSpecificMedia("[include in carousel]");
 
   return (
-  <main>
-    <div>
-      <h1>{page[0].title.rendered}</h1>
-    </div>
-    <div dangerouslySetInnerHTML={{ __html: page[0].content.rendered}} />
-  </main>
+    <>
+    <Carousel
+      media={carouselMedia}
+    />
+    <main>
+      <div dangerouslySetInnerHTML={{ __html: pageHtml}} />
+    </main>
+  </>
   );
 }
 

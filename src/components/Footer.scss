@@ -22,7 +22,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  & h3 {
+  & .info-col-head {
+    font-family: $header-font;
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;

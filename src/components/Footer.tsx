@@ -13,22 +13,23 @@ export default async function Footer() {
     <footer>
       <div className="info">
         <div className="address">
-          <h3>Visit us!</h3>
+          <span className="info-col-head">Visit us!</span> <br />
           Anteater Instruction & Research Building #4080 <br />
           653 E Peltason Dr <br />
           Irvine, CA 92697 <br />
-          <a href={AIRB_ADDRESS}>View on Google Maps</a>
+          <Link href={AIRB_ADDRESS}>View on Google Maps</Link>
         </div>
         <div className="info-col">
-          <h3>More ITE</h3>
+          <span className="info-col-head">Learn more</span>
           <ul>
+            <li><Link href="https://www.its.uci.edu/">ITS at UCI</Link></li>
             <li><Link href="https://ite.org">ITE (International)</Link></li>
             <li><Link href="https://westernite.org">Western ITE</Link></li>
             <li><Link href="https://socalite.org">SoCal ITE</Link></li>
           </ul>
         </div>
         <div className="info-col">
-          <h3>Sitemap</h3>
+          <span className="info-col-head">Sitemap</span>
           <ul>
             {pages.map((page: any) => (
               <li key={page.slug}>
@@ -50,7 +51,7 @@ export default async function Footer() {
           <Link href="https://campusgroups.uci.edu/ite/leadership-team/">ITE on UCI CampusGroups</Link>
           <Link href="mailto:itechapter.uci@gmail.com">itechapter.uci@gmail.com</Link>
           <div className="social-icons">
-            <Link href="https://linktr.ee/ite.ucirvine">
+            <Link href="http://eepurl.com/io-lgk">
               <FaEnvelope />
             </Link>
             <Link href="https://www.linkedin.com/company/28872357">

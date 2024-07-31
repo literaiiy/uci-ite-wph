@@ -1,11 +1,13 @@
 // variables
 $uci-yellow: #fbd30b;
+$uci-yellow-dark: rgb(233, 185, 13);
 $uci-blue: #0e5682;
 $uci-gray: #999998;
 $header-col: #00000010;
 // $subheader-col: #00000010;
 $text-col: #181818;
 $main-max: 70rem;
+$header-font: "Overpass";
 
 // dark mode
 @media (prefers-color-scheme: dark) {
@@ -55,7 +57,7 @@ $main-max: 70rem;
 }
 
 @font-face {
-  font-family: 'Overpass';
+  font-family: $header-font;
   src: url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap")
 }
 
@@ -90,7 +92,7 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Overpass";
+  font-family: $header-font;
   font-weight: 800;
 }
 

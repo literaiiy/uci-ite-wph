@@ -41,7 +41,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={defaultFont.className}>
         <Nav />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
