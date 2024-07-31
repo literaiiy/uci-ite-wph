@@ -25,7 +25,8 @@ const Carousel: React.FC<Props> = ({media}) => {
           <img src={med[0]}/>
           <span className="caption">
             <span className="title">{
-              new DOMParser().parseFromString(med[1], "text/html").body.textContent  
+              decodeHtml(med[1]).replace("<p>", "").replace("</p>", "")
+              // new JSDOM().parseFromString(med[1], "text/html").body.textContent  
             }</span>
             <span className="location">{getLocationFromDesc(med[2])}</span>
           </span>
@@ -40,6 +41,12 @@ const getLocationFromDesc = (desc: string): string => {
   const start: number = desc.indexOf("{{");
   const end: number = desc.indexOf("}}");
   return start != -1 ? desc.slice(start + 2, end) : "";
+}
+
+const decodeHtml = (html) => {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
 }
 
 export default Carousel;
