@@ -7,7 +7,7 @@ export const getPages = async(): Promise<object[]> => {
   return await removeFrontpage(await res.json());
 }
 
-export const getPageBySlug = async(slug: string): Promise<object[]> => {
+export const getPageBySlug = async(slug: string): Promise<any> => {
   const res = await fetch(`${API_URL}/pages?slug=${slug}`);
   return res.json();
 }
