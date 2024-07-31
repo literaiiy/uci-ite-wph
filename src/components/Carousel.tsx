@@ -42,7 +42,10 @@ const getLocationFromDesc = (desc: string): string => {
   return start != -1 ? desc.slice(start + 2, end) : "";
 }
 
-const decodeHtml = (html: string) => {
+const decodeHtml = (html: string): string => {
+  if (typeof document === "undefined") {
+    return html;
+  }
   const txt = document.createElement("textarea");
   txt.innerHTML = html;
   return txt.value;
