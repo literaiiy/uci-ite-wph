@@ -7,6 +7,7 @@ $mobile-navheight: 5rem; // needed for calculations, kinda janky
     height: 100%;
   }
   .nav-items {
+    display: none ;
     z-index: 100;
     top: $mobile-navheight;
     position: absolute;

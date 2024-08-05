@@ -8,9 +8,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 
 const ANTEATER_SIZE: number = 80;
+const MOBILE_CUTOFF: number = 720;
 
 export default function Nav({ pages }: { pages: any }) {
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(window.innerWidth > 720);
+  
 
   return (
     <nav>

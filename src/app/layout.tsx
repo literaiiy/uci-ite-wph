@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: { template: "%s | ITE at UC Irvine", default: "ITE at UC Irvine" },
     description: DESC,
-    url: "iteuci.com",
+    url: "https://iteuci.org",
     type: "website",
     locale: "en_US",
     // site_name: "ITE at UC Irvine",
