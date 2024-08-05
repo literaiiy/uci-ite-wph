@@ -1,28 +1,44 @@
 @import "../app/globals.scss";
-$mobile-navheight: 3rem; // needed for calculations, kinda janky
+$mobile-navheight: 5rem; // needed for calculations, kinda janky
 
 @media screen and (max-width: $mobile-cutoff) {
+  nav {
+    max-height: $mobile-navheight !important;
+    height: 100%;
+  }
   .nav-items {
+    z-index: 100;
+    top: $mobile-navheight;
     position: absolute;
     flex-direction: column;
     gap: 0.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    margin: 0;
     & > a {
       padding: 0.5rem;
     }
   }
   .menu-button {
-    display: block !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     color: white;
-    position: absolute;
-    left: 1rem;
+    // position: absolute;
+    right: 1rem;
     top: 1rem;
     z-index: 1000;
     &:hover {
       color: $uci-yellow;
     }
   }
-  
+  .sub {
+    display: none !important;
+  }
+  .logo-wrapper {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
 }
 
 .menu-button {

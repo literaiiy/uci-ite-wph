@@ -14,12 +14,6 @@ export default function Nav({ pages }: { pages: any }) {
 
   return (
     <nav>
-      <div
-        className="menu-button"
-        onClick={() => setShowNav(!showNav)}
-      >
-        <RxHamburgerMenu />
-      </div>
       <div className="logo-wrapper">
         <Link href="/" className="logo">
           <span className="uci">uci</span>
@@ -32,15 +26,26 @@ export default function Nav({ pages }: { pages: any }) {
           <span>at</span>
           <span className="em">UC Irvine</span>
         </span>
+        <div
+          className="menu-button"
+          onClick={() => setShowNav(!showNav)}
+          >
+          <RxHamburgerMenu />
+        </div>
         {/* <Link className="join-button" href="http://eepurl.com/io-lgk">Join</Link> */}
       </div>
       <div
         className="nav-items"
         style={{ display: showNav ? "flex" : "none" }}
       >
-        <Link href="/">Home</Link>
+        <Link
+          onClick={() => {setShowNav(false)}}
+          href="/"
+        >Home
+        </Link>
         {pages.map((page: any) => (
           <Link 
+            onClick={() => setShowNav(false)}
             key={page.slug}
             href={`/${page.slug}`}
             // className={page.slug === pn.split("/")[-1] ? "selected" : ""}

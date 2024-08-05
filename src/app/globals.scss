@@ -3,8 +3,8 @@ $uci-yellow: #fbd30b;
 $uci-yellow-dark: rgb(233, 185, 13);
 $uci-blue: #0e5682;
 $uci-gray: #999998;
-$header-col: #00000010;
-// $subheader-col: #00000010;
+$header-col: #f0f0f0;
+$subheader-col: #dddddd;
 $text-col: #181818;
 $main-max: 70rem;
 $header-font: "Overpass";
@@ -58,7 +58,7 @@ $mobile-cutoff: 720px;
 }
 
 @font-face {
-  font-family: $header-font;
+  font-family: "Overpass";
   src: url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap")
 }
 

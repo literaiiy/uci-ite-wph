@@ -22,7 +22,7 @@ $toast-purple-dark: #5f00b7;
   bottom: 1rem;
   right: 1rem;
   background-color: $toast-purple;
-  padding: .75rem;
+  // padding: .75rem;
   border: 0.25rem solid $toast-purple-dark;
   // border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
@@ -39,6 +39,8 @@ $toast-purple-dark: #5f00b7;
     color:rgba(255, 255, 255, 0.9);
   }
   & > .message {
+    padding: 0.75rem 0;
+    line-height: 1.25rem;
     text-decoration: none;
     color: #fff !important;
     &:hover {
@@ -46,6 +48,8 @@ $toast-purple-dark: #5f00b7;
     }
   }
   & > svg {
+    // padding: 0.75rem 0;
+    margin: 0.75rem 0 0.75rem 0.75rem;
     font-size: 1.125rem;
     line-height: 1rem;
     color: #fff;
@@ -66,6 +70,7 @@ $toast-purple-dark: #5f00b7;
   transition: 0.2s ease-in-out;
   cursor: pointer;
   font-size: 1.25rem;
+  padding: 0.75rem 0.75rem 0.75rem 0;
   font-weight: 700;
   color: #fff;
   line-height: 1rem;
