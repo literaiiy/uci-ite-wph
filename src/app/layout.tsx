@@ -37,11 +37,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pages = await getPages();
 
   return (
     <html lang="en">
       <body className={defaultFont.className}>
-        <Nav />
+        <Nav pages={pages} />
         {children}
         <Footer />
         <Toast 

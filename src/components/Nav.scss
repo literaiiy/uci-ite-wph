@@ -1,4 +1,33 @@
 @import "../app/globals.scss";
+$mobile-navheight: 3rem; // needed for calculations, kinda janky
+
+@media screen and (max-width: $mobile-cutoff) {
+  .nav-items {
+    position: absolute;
+    flex-direction: column;
+    gap: 0.5rem;
+    & > a {
+      padding: 0.5rem;
+    }
+  }
+  .menu-button {
+    display: block !important;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 1000;
+    &:hover {
+      color: $uci-yellow;
+    }
+  }
+  
+}
+
+.menu-button {
+  display: none;
+}
 
 nav {
   width: 100%;

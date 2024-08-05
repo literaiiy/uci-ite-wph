@@ -1,15 +1,25 @@
+'use client';
+
 import { getPages } from "@/lib/api";
 import "./Nav.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
 
 const ANTEATER_SIZE: number = 80;
 
-export default async function Nav() {
-  const pages = await getPages();
+export default function Nav({ pages }: { pages: any }) {
+  const [showNav, setShowNav] = useState(true);
 
   return (
     <nav>
+      <div
+        className="menu-button"
+        onClick={() => setShowNav(!showNav)}
+      >
+        <RxHamburgerMenu />
+      </div>
       <div className="logo-wrapper">
         <Link href="/" className="logo">
           <span className="uci">uci</span>
@@ -24,7 +34,10 @@ export default async function Nav() {
         </span>
         {/* <Link className="join-button" href="http://eepurl.com/io-lgk">Join</Link> */}
       </div>
-      <div className="nav-items">
+      <div
+        className="nav-items"
+        style={{ display: showNav ? "flex" : "none" }}
+      >
         <Link href="/">Home</Link>
         {pages.map((page: any) => (
           <Link 

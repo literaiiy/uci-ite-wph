@@ -1,6 +1,6 @@
 @import "../app/globals.scss";
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: $mobile-cutoff) {
   .slick-slider {
     // width: 100%;
     max-height: 12rem;

@@ -8,6 +8,7 @@ $header-col: #00000010;
 $text-col: #181818;
 $main-max: 70rem;
 $header-font: "Overpass";
+$mobile-cutoff: 720px;
 
 // dark mode
 @media (prefers-color-scheme: dark) {
