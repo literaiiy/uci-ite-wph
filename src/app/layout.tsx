@@ -4,6 +4,7 @@ import "./globals.scss";
 import { getPages } from "@/lib/api";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Toast from "@/components/Toast";
 
 const defaultFont = Noto_Sans({ subsets: ["latin"] });
 const DESC = "The University of California, Irvine student chapter of the Institute of Transportation Engineers.";
@@ -43,6 +44,10 @@ export default async function RootLayout({
         <Nav />
         {children}
         <Footer />
+        <Toast 
+          message="Subscribe to our newsletter!"
+          href="http://eepurl.com/io-lgk"
+        />
       </body>
     </html>
   );

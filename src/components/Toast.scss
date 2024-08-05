@@ -1,0 +1,78 @@
+@import "../app/globals.scss";
+
+$toast-purple: #8900eb;
+$toast-purple-dark: #5f00b7;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.toast {
+  // opacity: 0;
+  transition: background-color 0.2s ease-in-out, opacity 1s ease-in-out;
+  font-family: $header-font;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: $toast-purple;
+  padding: .75rem;
+  border: 0.25rem solid $toast-purple-dark;
+  // border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-direction: row;
+  gap: .75rem;
+
+  &:hover {
+    background-color: $toast-purple-dark;
+    color:rgba(255, 255, 255, 0.9);
+  }
+  & > .message {
+    text-decoration: none;
+    color: #fff !important;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  & > svg {
+    font-size: 1.125rem;
+    line-height: 1rem;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      color: #ccc;
+    }
+  }
+  
+}
+
+.toast.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.close {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: #ccc;
+  }
+}

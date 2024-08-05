@@ -22,7 +22,7 @@ export default async function Nav() {
           <span>at</span>
           <span className="em">UC Irvine</span>
         </span>
-        <Link className="join-button" href="http://eepurl.com/io-lgk">Join</Link>
+        {/* <Link className="join-button" href="http://eepurl.com/io-lgk">Join</Link> */}
       </div>
       <div className="nav-items">
         <Link href="/">Home</Link>
