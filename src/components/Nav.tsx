@@ -13,7 +13,9 @@ const MOBILE_CUTOFF: number = 720;
 export default function Nav({ pages }: { pages: any }) {
 
   // only show nav by default if on desktop
-  const [showNav, setShowNav] = useState(window.innerWidth > 720);
+  const [showNav, setShowNav] = useState(
+    typeof window !== "undefined" && window.innerWidth > MOBILE_CUTOFF
+  );
 
   return (
     <nav>
