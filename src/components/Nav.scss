@@ -6,6 +6,9 @@ $mobile-navheight: 5rem; // needed for calculations, kinda janky
     max-height: $mobile-navheight !important;
     height: 100%;
   }
+  .uci, .ite {
+    display: none;
+  }
   .nav-items {
     display: none ;
     z-index: 100;
