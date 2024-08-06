@@ -5,6 +5,7 @@ import { getPages } from "@/lib/api";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Toast from "@/components/Toast";
+import Banner from "@/components/Banner";
 
 const defaultFont = Noto_Sans({ subsets: ["latin"] });
 const DESC = "The University of California, Irvine student chapter of the Institute of Transportation Engineers.";
@@ -42,6 +43,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={defaultFont.className}>
+        <Banner/>
         <Nav pages={pages} />
         {children}
         <Footer />

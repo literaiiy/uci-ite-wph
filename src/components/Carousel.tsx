@@ -10,6 +10,9 @@ const SLICK_SETTINGS = {
   infinite: true,
   speed: 1000,
   slidesToShow: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  cssEase: "ease-in-out",
 }
 
 interface Props {

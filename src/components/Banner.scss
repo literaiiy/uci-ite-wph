@@ -1,0 +1,15 @@
+@import "../app/globals.scss";
+
+.banner {
+  font-size: 0.875rem;
+  position: sticky;
+  color: white;
+  background-color: purple;
+  width: 100vw;
+  text-align: center;
+  padding: 0.5rem;
+  & a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
