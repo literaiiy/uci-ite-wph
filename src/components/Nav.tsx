@@ -11,11 +11,10 @@ const ANTEATER_SIZE: number = 80;
 const MOBILE_CUTOFF: number = 720;
 
 export default function Nav({ pages }: { pages: any }) {
+  const isDesktop = typeof window !== "undefined" && window.innerWidth > MOBILE_CUTOFF
 
   // only show nav by default if on desktop
-  const [showNav, setShowNav] = useState(
-    typeof window !== "undefined" && window.innerWidth > MOBILE_CUTOFF
-  );
+  const [showNav, setShowNav] = useState(isDesktop);
 
   return (
     <nav>
@@ -44,13 +43,13 @@ export default function Nav({ pages }: { pages: any }) {
         style={{ display: showNav ? "flex" : "none" }}
       >
         <Link
-          onClick={() => {setShowNav(false)}}
+          onClick={() => {if (!isDesktop) setShowNav(false)}}
           href="/"
         >Home
         </Link>
         {pages.map((page: any) => (
           <Link 
-            onClick={() => setShowNav(false)}
+            onClick={() => {if (!isDesktop) setShowNav(false)}}
             key={page.slug}
             href={`/${page.slug}`}
             // className={page.slug === pn.split("/")[-1] ? "selected" : ""}
