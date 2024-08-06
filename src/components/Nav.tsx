@@ -5,7 +5,7 @@ import "./Nav.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ANTEATER_SIZE: number = 80;
 const MOBILE_CUTOFF: number = 720;
@@ -14,7 +14,11 @@ export default function Nav({ pages }: { pages: any }) {
   const isDesktop = typeof window !== "undefined" && window.innerWidth > MOBILE_CUTOFF
 
   // only show nav by default if on desktop
-  const [showNav, setShowNav] = useState(isDesktop);
+  const [showNav, setShowNav] = useState(true);
+
+  useEffect(() => {
+    setShowNav(isDesktop);
+  }, [isDesktop])
 
   return (
     <nav>
