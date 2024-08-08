@@ -1,20 +1,24 @@
 const API_URL = "https://sites.uci.edu/irvineite/wp-json/wp/v2";
 
-export const revalidate = 60; // sec?
+export const headers = { headers: {
+  "Content-Type": "application/json",
+  "Cache-Control": "no-cache"
+}};
+
 
 export const getPages = async(): Promise<object[]> => {
-  const res = await fetch(`${API_URL}/pages`);
+  const res = await fetch(`${API_URL}/pages`, headers);
   return await removeFrontpage(await res.json());
 }
 
 export const getPageBySlug = async(slug: string): Promise<any> => {
-  const res = await fetch(`${API_URL}/pages?slug=${slug}`);
+  const res = await fetch(`${API_URL}/pages?slug=${slug}`, headers);
   return res.json();
 }
 
 // Gets media from gallery with description that includes specified string.
 export const getSpecificMedia = async(description: string): Promise<[string, string, string][]> => {
-  const res = await fetch(`${API_URL}/media?search=${description}`);
+  const res = await fetch(`${API_URL}/media?search=${description}`, headers);
   const json = await res.json();
   const parsed = json.map((media: any) => [
     media.source_url,

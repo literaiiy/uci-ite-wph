@@ -3,8 +3,6 @@ import Head from "next/head";
 import "../wp.scss"
 import { Metadata } from "next";
 
-export const dynamic = 'force-dynamic';
-
 export default async function Page({ params }: { params: { page: string } }) {
   const page = await getPageBySlug(params.page);
   
