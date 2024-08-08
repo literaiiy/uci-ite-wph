@@ -2,6 +2,8 @@ import Carousel from "@/components/Carousel";
 import "./wp.scss"
 import { getPageBySlug, getSpecificMedia } from "@/lib/api";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const page: object[] = await getPageBySlug("frontpage");
   // @ts-ignore
