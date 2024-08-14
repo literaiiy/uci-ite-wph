@@ -4,9 +4,19 @@
   .info {
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center;
-    // flex-direction: column !important;
-    // align-items: center;
+    text-align: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .socials {
+    & > * {
+      width: 100%;
+    }
+    & > .social-icons {
+      width: 100%;
+      justify-content: space-around !important;
+    }
   }
 }
 

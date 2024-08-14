@@ -4,7 +4,7 @@ import { getPages } from "@/lib/api";
 import "./Nav.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { GiHamburgerMenu as MenuIcon } from "react-icons/gi";
 import { useEffect, useState } from "react";
 
 const ANTEATER_SIZE: number = 80;
@@ -38,7 +38,7 @@ export default function Nav({ pages }: { pages: any }) {
           className="menu-button"
           onClick={() => setShowNav(!showNav)}
           >
-          <RxHamburgerMenu />
+          <MenuIcon />
         </div>
         {/* <Link className="join-button" href="http://eepurl.com/io-lgk">Join</Link> */}
       </div>

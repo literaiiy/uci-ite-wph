@@ -2,12 +2,13 @@
 
 .banner {
   font-size: 0.875rem;
-  position: sticky;
+  position: absolute;
+  z-index: 1000;
   color: white;
-  background-color: purple;
+  background-color: #33003350;
   width: 100vw;
   text-align: center;
-  padding: 0.5rem;
+  padding: .5rem;
   & a {
     color: inherit;
     text-decoration: underline;

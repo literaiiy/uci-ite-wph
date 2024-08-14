@@ -1,5 +1,5 @@
 @import "../app/globals.scss";
-$mobile-navheight: 5rem; // needed for calculations, kinda janky
+$mobile-navheight: 4.5rem; // needed for calculations, kinda janky
 
 @media screen and (max-width: $mobile-cutoff) {
   nav {
@@ -16,7 +16,7 @@ $mobile-navheight: 5rem; // needed for calculations, kinda janky
     position: absolute;
     flex-direction: column;
     gap: 0.5rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem .25rem -.25rem rgba(0, 0, 0, 0.1);
     margin: 0;
     & > a {
       padding: 0.5rem;
@@ -26,7 +26,7 @@ $mobile-navheight: 5rem; // needed for calculations, kinda janky
     display: flex !important;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     // position: absolute;
     right: 1rem;
@@ -42,6 +42,8 @@ $mobile-navheight: 5rem; // needed for calculations, kinda janky
   .logo-wrapper {
     flex-direction: row !important;
     justify-content: space-between !important;
+    padding: .5rem 1.5rem !important;
+    height: $mobile-navheight;
   }
 }
 

@@ -9,7 +9,17 @@ $hero-max-mobile: min(24rem, 50vh);
     height: 100%;
     max-height: $hero-max-mobile !important;
   }
-  
+  .img-container {
+    & > .caption {
+      width: 85%;
+      & > .title {
+        font-size: 2rem !important;
+      }
+      & > .location {
+        font-size: 1rem !important;
+      }
+    }
+  }
 }
 
 
