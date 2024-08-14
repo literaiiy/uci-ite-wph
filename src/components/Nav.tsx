@@ -1,13 +1,13 @@
 'use client';
 
-import { getPages } from "@/lib/api";
 import "./Nav.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu as MenuIcon } from "react-icons/gi";
 import { useEffect, useState } from "react";
 
-const ANTEATER_SIZE: number = 80;
+const ANTEATER_SIZE: [number, number] = [963, 333];
+const LOGO_SIZE_MULT: number = 0.2;
 const MOBILE_CUTOFF: number = 720;
 
 export default function Nav({ pages }: { pages: any }) {
@@ -24,15 +24,19 @@ export default function Nav({ pages }: { pages: any }) {
     <nav>
       <div className="logo-wrapper">
         <Link href="/" className="logo">
-          <span className="uci">uci</span>
-          <Image alt="UCI ITE logo" src="/anteater.svg" width={ANTEATER_SIZE} height={ANTEATER_SIZE * 0.66}/>
-          <span className="ite">ite</span>
+          {/* <span className="uci">uci</span> */}
+          <Image
+            alt="UCI ITE logo"
+            src={"/itenewwhite.svg"}
+            fill={true}
+            // width={ANTEATER_SIZE[0] * LOGO_SIZE_MULT}
+            // height={ANTEATER_SIZE[1] * LOGO_SIZE_MULT}
+          />
+          {/* <Image alt="UCI ITE logo" src="/anteater.svg" width={ANTEATER_SIZE} height={ANTEATER_SIZE * 0.66}/> */}
+          {/* <span className="ite">ite</span> */}
         </Link>
         <span className="sub">
-          <span>The</span>
-          <span className="em">Institute of Transportation Engineers</span>
-          <span>at</span>
-          <span className="em">UC Irvine</span>
+          The Institute of Transportation Engineers at UC Irvine
         </span>
         <div
           className="menu-button"

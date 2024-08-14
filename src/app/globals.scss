@@ -1,13 +1,14 @@
 // variables
 $uci-yellow: #fbd30b;
 $uci-yellow-dark: rgb(233, 185, 13);
-$uci-blue: #0e5682;
+$uci-blue: #006791;
 $uci-gray: #999998;
 $header-col: #f0f0f0;
 $subheader-col: #dddddd;
 $text-col: #181818;
 $main-max: 60rem;
 $header-font: "Overpass";
+$subheader-font: "Helvetica Condensed";
 $mobile-cutoff: 720px;
 // $banner-height: 2rem;
 
@@ -34,6 +35,11 @@ $mobile-cutoff: 720px;
   font-family: "Overpass";
   src: url("../lib/fonts/overpass-it.ttf");
   font-style: italic;
+}
+
+@font-face {
+  font-family: "Helvetica Condensed";
+  src: url("../lib/fonts/helvetica_condensed.ttf");
 }
 
 // general

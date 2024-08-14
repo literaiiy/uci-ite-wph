@@ -4,12 +4,15 @@
   .info {
     flex-wrap: wrap;
     gap: 1rem;
-    text-align: center !important;
-    justify-content: center !important;
+    // text-align: center !important;
+    // justify-content: center !important;
     flex-direction: column !important;
-    align-items: center !important;
+    // align-items: center !important;
   }
   .socials {
+    justify-content: center !important;
+    align-items: center !important;
+    margin: auto;
     & > * {
       width: 100%;
     }

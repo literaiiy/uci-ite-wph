@@ -41,12 +41,11 @@ export default async function Footer() {
         <div className="socials">
           <div className="footer-logo">
             <Image
-              src="/anteater.svg"
-              height={36}
-              width={64}
+              src="/itenew.svg"
+              height={111/2}
+              width={321/2}
               alt="UCI ITE logo"
             />
-            <span>uci ite</span>
           </div>
           <Link href="https://campusgroups.uci.edu/ite/leadership-team/">ITE on UCI CampusGroups</Link>
           <Link href="mailto:itechapter.uci@gmail.com">itechapter.uci@gmail.com</Link>

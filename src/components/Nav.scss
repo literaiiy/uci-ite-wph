@@ -6,9 +6,6 @@ $mobile-navheight: 4.5rem; // needed for calculations, kinda janky
     max-height: $mobile-navheight !important;
     height: 100%;
   }
-  .uci, .ite {
-    display: none;
-  }
   .nav-items {
     display: none;
     z-index: 100;
@@ -45,6 +42,10 @@ $mobile-navheight: 4.5rem; // needed for calculations, kinda janky
     padding: .5rem 1.5rem !important;
     height: $mobile-navheight;
   }
+  .logo {
+    height: 3rem !important;
+    width: 9rem !important;
+  }
 }
 
 .menu-button {
@@ -62,9 +63,9 @@ nav {
 
 .sub {
   color: white;
-  font-family: $header-font;
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-family: $subheader-font;
+  font-size: 1.25rem;
+  // font-weight: 600;
   // text-transform: uppercase;
   display: flex;
   flex-direction: row;
@@ -125,30 +126,10 @@ nav {
 }
 
 .logo {
-  display: flex;
-  gap: .6rem;
-  font-size: 3rem;
-  font-weight: 700;
-  font-family: "Neue Kabel EB";
-  flex-direction: row;
-  text-decoration: none;
+  height: 4rem;
+  width: 12rem;
+  position: relative;
   &:hover {
     background: none;
   }
-}
-
-.uci {
-  color: $uci-yellow;
-  text-decoration: underline dashed;
-  text-decoration-color: $uci-yellow;
-}
-
-.anteater {
-  
-}
-
-.ite {
-  color: white;
-  text-decoration: underline dashed;
-  text-decoration-color: white;
 }
