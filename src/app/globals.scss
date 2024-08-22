@@ -63,6 +63,7 @@ body {
   flex-direction: column;
   align-items: center;
   color: $text-col;
+  -webkit-font-smoothing: antialiased
 }
 
 main {

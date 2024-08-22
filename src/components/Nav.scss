@@ -65,15 +65,9 @@ nav {
   color: white;
   font-family: $subheader-font;
   font-size: 1.25rem;
-  // font-weight: 600;
-  // text-transform: uppercase;
   display: flex;
   flex-direction: row;
   gap: 0.25rem;
-  & > .em {
-    color: $uci-yellow;
-    font-weight: 800;
-  }
 }
 
 .nav-items {
