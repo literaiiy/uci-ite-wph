@@ -28,8 +28,3 @@ export async function generateMetadata({ params }: {params: {page: string}}): Pr
     title: page[0].title.rendered,
   }
 }
-
-// export async function generateStaticParams() {
-//   const pages = await getPages();
-//   return pages.map((page: any) => ({ params: { page: page.slug } }));
-// }
