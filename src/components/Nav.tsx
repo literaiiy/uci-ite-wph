@@ -43,8 +43,8 @@ export default function Nav({ pages }: { pages: Page[] }) {
               <Link
                 href={page.slug}
                 // onClick={() => { if (!isDesktop) setShowNav(false); }}
-                onMouseEnter={() => toggleDropdown(page.id)}
-                onMouseLeave={() => toggleDropdown(page.id)}
+                onMouseEnter={() => {if (!isDesktop) toggleDropdown(page.id)}}
+                onMouseLeave={() => {if (!isDesktop) toggleDropdown(page.id)}}
               >
                 {page.title.rendered}
                 {page.children && page.children.length > 0 && (
