@@ -44,6 +44,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={defaultFont.className}>
         <Banner/>
+        {/* @ts-ignore */}
         <Nav pages={pages} />
         {children}
         <Footer />
