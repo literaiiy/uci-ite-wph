@@ -6,7 +6,7 @@ $mobile-navheight: 4.5rem; // needed for calculations, kinda janky
     max-height: $mobile-navheight !important;
     height: 100%;
   }
-  .nav-items{
+  .nav-items {
     display: none;
     z-index: 100;
     top: $mobile-navheight;
@@ -15,8 +15,28 @@ $mobile-navheight: 4.5rem; // needed for calculations, kinda janky
     gap: 0.5rem;
     box-shadow: 0 .5rem .25rem -.25rem rgba(0, 0, 0, 0.1);
     margin: 0;
-    & > a {
+    & a {
+      display: flex;
+      flex-direction: row !important;
       padding: 0.5rem;
+      width: 100% !important;
+      justify-content: space-between !important;
+    }
+    & > ul {
+      // width: auto !important;
+      flex-direction: column;
+      align-items: start !important;
+    }
+    & .dropdown-arrow {
+      // margin: -1rem -1rem -1rem 0;
+      // margin: 0 !important;
+      // padding: 1rem 1rem 1rem 0.25rem;
+      padding: 1rem 2rem;
+    }
+    & .dropdown-content {
+      position: static !important;
+      padding: 0 0 0 2rem !important;
+      box-shadow: none !important;
     }
   }
   .menu-button {
@@ -76,34 +96,79 @@ nav {
   height: auto;
   & > ul {
     box-sizing: border-box;
-    height: auto;
     list-style-type: none;
     width: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
     font-family: $header-font;
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
-    justify-content: center;
     background-color: $header-col;
-    & > li {
-      box-sizing: border-box;
+    & > a {
+      display: flex;
+      flex-direction: row;
+      gap: 0.25rem;
       padding: 1rem;
+      box-sizing: border-box;
       &:hover {
         background-color: $uci-blue;
-        color: white;
+        color: white
       }
-      & > a {
-        box-sizing: border-box;
-        // &:hover {
-          // background-color: $uci-blue;
-          // color: white;
-        // }
+    }
+    // & > li {
+    //   box-sizing: border-box;
+    //   padding: 1rem;
+    //   &:hover {
+    //     background-color: $uci-blue;
+    //     color: white;
+    //   }
+    //   & > a {
+    //     box-sizing: border-box;
+    //   }
+    // }
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-content {
+    right: 0;
+    top: 1.5rem;
+    white-space: nowrap;
+    padding: 1rem;
+    position: absolute;
+    background-color: $header-col;
+    min-width: 10rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    & > a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      display: block;
+      &:hover {
+        background-color: $uci-blue;
       }
     }
   }
-    
 }
+
+.dropdown-arrow {
+  z-index: 14;
+  transition: 0.2s ease-in-out;
+  margin: -1rem -1rem -1rem 0;
+  padding: 1rem 1rem 1rem 0.25rem;
+  // background-color: yellow;
+  &:hover {
+    color: $uci-yellow;
+  }
+}
+
+
 
 // uci ite logo
 .logo-wrapper {

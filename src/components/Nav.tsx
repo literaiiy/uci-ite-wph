@@ -38,22 +38,43 @@ export default function Nav({ pages }: { pages: Page[] }) {
     return (
       <ul>
         {pages.map(page => (
-          <li key={page.id}>
-            <Link 
-              href={`/${page.slug}`}
-              onClick={() => { if (!isDesktop) setShowNav(false); }}
-            >
-              {page.title.rendered}
-            </Link>
-            {page.children && page.children.length > 0 && (
-              <>
-                <div className={`dropdown-menu ${dropdowns[page.id] ? 'show' : ''}`}>
-                  {renderMenu(page.children)}
-                </div>
-              </>
-            )}
-          </li>
+          // <li key={page.id} className={page.children ? "has-children" : ""}>
+            <>
+              <Link
+                href={page.slug}
+                // onClick={() => { if (!isDesktop) setShowNav(false); }}
+                onMouseEnter={() => toggleDropdown(page.id)}
+                onMouseLeave={() => toggleDropdown(page.id)}
+              >
+                {page.title.rendered}
+                {page.children && page.children.length > 0 && (
+                  (
+                    <div
+                      className="dropdown-arrow"
+                      onClick={(e) => {if (!isDesktop) {
+                        e.preventDefault();
+                        toggleDropdown(page.id)
+                      }}}
+                    >▼</div>
+                  )
+                )}
+              </Link>
+              {page.children && page.children.length > 0 && (
+                <>
+                  <div
+                    className="dropdown"
+                    style={{ display: dropdowns[page.id] ? "block" : "none" }}
+                  >
+                    <div className="dropdown-content">
+                      {renderMenu(page.children)}
+                    </div>
+                  </div>
+                </>
+              )}
+            </>
+          // </li>
         ))}
+
       </ul>
     );
   };
