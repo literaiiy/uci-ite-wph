@@ -4,6 +4,7 @@ import "./Nav.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu as MenuIcon } from "react-icons/gi";
+import { FaHouseChimney } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
 // TypeScript type for a page
@@ -38,41 +39,41 @@ export default function Nav({ pages }: { pages: Page[] }) {
     return (
       <ul>
         {pages.map(page => (
-          // <li key={page.id} className={page.children ? "has-children" : ""}>
-            <>
-              <Link
-                href={page.slug}
-                // onClick={() => { if (!isDesktop) setShowNav(false); }}
-                onMouseEnter={() => {if (isDesktop) toggleDropdown(page.id)}}
-                onMouseLeave={() => {if (isDesktop) toggleDropdown(page.id)}}
-              >
-                {page.title.rendered}
-                {page.children && page.children.length > 0 && (
-                  (
-                    <div
-                      className="dropdown-arrow"
-                      onClick={(e) => {if (!isDesktop) {
-                        e.preventDefault();
-                        toggleDropdown(page.id)
-                      }}}
-                    >▼</div>
-                  )
-                )}
-              </Link>
+          <li
+            key={page.id}
+            className={page.children && page.children.length > 0 ? "has-children" : ""}
+            // onMouseEnter={() => {toggleDropdown(page.id)}}
+            // onMouseLeave={() => {toggleDropdown(page.id)}}
+          >
+            <Link
+              href={page.slug}
+            >
+              {page.title.rendered}
               {page.children && page.children.length > 0 && (
-                <>
+                (
                   <div
-                    className="dropdown"
-                    style={{ display: dropdowns[page.id] ? "block" : "none" }}
-                  >
-                    <div className="dropdown-content">
-                      {renderMenu(page.children)}
-                    </div>
-                  </div>
-                </>
+                    className="dropdown-arrow"
+                    onClick={(e) => {
+                      console.log("BALLS")
+                      e.preventDefault();
+                      toggleDropdown(page.id)
+                    }}
+                  >▼</div>
+                )
               )}
-            </>
-          // </li>
+            </Link>
+            {page.children && page.children.length > 0 && (
+              <>
+                <div
+                  className="dropdown"
+                  style={{ display: dropdowns[page.id] ? "block" : "none" }}
+                />
+                <div className="dropdown-content">
+                  {renderMenu(page.children)}
+                </div>
+              </>
+            )}
+          </li>
         ))}
 
       </ul>
@@ -103,13 +104,17 @@ export default function Nav({ pages }: { pages: Page[] }) {
         className="nav-items"
         style={{ display: showNav ? "flex" : "none" }}
       >
-        {/* <Link
-          onClick={() => { if (!isDesktop) setShowNav(false); }}
+        {/* <Link 
           href="/"
+          className="home-icon"
         >
-          Home
+          <FaHouseChimney />
         </Link> */}
-        {renderMenu(pages)}
+        {renderMenu([
+          // add home to replace "frontpage"
+          { id: 0, slug: "/", title: { rendered: "Home" } },
+          ...pages
+        ])}
       </div>
     </nav>
   );

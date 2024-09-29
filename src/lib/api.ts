@@ -1,3 +1,5 @@
+// import { cookies } from "next/headers";
+
 const API_URL = "https://sites.uci.edu/irvineite/wp-json/wp/v2";
 
 export const headers = { headers: {
@@ -5,11 +7,16 @@ export const headers = { headers: {
   "Cache-Control": "no-cache"
 }};
 
+// control cache invalidation time
+export const revalidate = 300; // 5 min
+
 /**
  * Gets a list of pages, ordered by the "Order" property set in Wordpress.
  * @returns A page hierarchy.
  */
 export const getPages = async(): Promise<object[]> => {
+  // const _cookies = cookies()
+
   const res = await fetch(`${API_URL}/pages?orderby=menu_order&order=asc`, headers);
   const pages = await removeFrontpage(await res.json());
   return buildPageHierarchy(pages);
@@ -78,6 +85,6 @@ export const getSpecificMedia = async(description: string): Promise<[string, str
  * *Necessary for the current implementation of the carousel
  */
 const removeFrontpage = (pages: any) => {
-  return pages;
-  // return pages.filter((page: any) => page.slug !== "frontpage");
+  // return pages;
+  return pages.filter((page: any) => page.slug !== "frontpage");
 }
