@@ -9,7 +9,7 @@ export const headers = { headers: {
 
 // control cache invalidation time
 export const revalidate = 300; // 5 min
-
+ 
 /**
  * Gets a list of pages, ordered by the "Order" property set in Wordpress.
  * @returns A page hierarchy.

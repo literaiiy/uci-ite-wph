@@ -17,13 +17,13 @@ $toast-purple-dark: #5f00b7;
   transition: background-color 0.2s ease-in-out, opacity 1s ease-in-out;
   font-family: $header-font;
   font-size: 0.9375rem;
-  font-weight: 700;
+  font-weight: 600;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background-color: $toast-purple;
+  background-color: $uci-blue;
   // padding: .75rem;
-  border: 0.25rem solid $toast-purple-dark;
+  border: 0.25rem solid $uci-blue-dark;
   // border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   z-index: 1000;
@@ -35,7 +35,7 @@ $toast-purple-dark: #5f00b7;
   gap: .75rem;
 
   &:hover {
-    background-color: $toast-purple-dark;
+    background-color: $uci-blue-dark;
     color:rgba(255, 255, 255, 0.9);
   }
   & > .message {

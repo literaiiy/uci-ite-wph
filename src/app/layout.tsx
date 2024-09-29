@@ -43,15 +43,15 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={defaultFont.className}>
-        <Banner/>
+        {/* <Banner/> */}
         {/* @ts-ignore */}
         <Nav pages={pages} />
         {children}
         <Footer />
-        <Toast 
+        {/* <Toast 
           message="Subscribe to our newsletter!"
           href="http://eepurl.com/io-lgk"
-        />
+        /> */}
       </body>
     </html>
   );

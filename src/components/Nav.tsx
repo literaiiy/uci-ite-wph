@@ -33,6 +33,7 @@ export default function Nav({ pages }: { pages: Page[] }) {
 
   const toggleDropdown = (pageId: number) => {
     setDropdowns(prev => ({ ...prev, [pageId]: !prev[pageId] }));
+    console.log("dropdowns", JSON.stringify(dropdowns));
   };
 
   const renderMenu = (pages: Page[]): JSX.Element => {
@@ -66,9 +67,12 @@ export default function Nav({ pages }: { pages: Page[] }) {
               <>
                 <div
                   className="dropdown"
-                  style={{ display: dropdowns[page.id] ? "block" : "none" }}
+                  // style={{ display: dropdowns[page.id] ? "block" : "none" }}
                 />
-                <div className="dropdown-content">
+                <div 
+                  className="dropdown-content"
+                  style={{ display: dropdowns[page.id] ? "block" : "none" }}
+                >
                   {renderMenu(page.children)}
                 </div>
               </>
