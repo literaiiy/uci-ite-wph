@@ -1,0 +1,42 @@
+body {
+  background-color: #2d2d2d;
+}
+
+h1 {
+  color: rgb(129, 196, 255) !important;
+  text-align: center;
+  display: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  color: white !important;
+  & > mark {
+    color: white !important;
+  }
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  color: white !important;
+  & > mark {
+    color: white !important;
+  }
+}
+
+
+h2, h3, h4 {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  & > mark {
+    color: white !important;
+  }
+}

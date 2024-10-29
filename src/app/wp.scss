@@ -58,8 +58,9 @@ main hr {
 
 figure.wp-block-gallery {
   display: flex;
+  // justify-content: space-between;
   position: relative;
-  flex-wrap: nowrap;
+  // flex-wrap: nowrap;
   justify-content: center;
   gap: 1rem;
   box-sizing: border-box;
@@ -77,6 +78,15 @@ figure.wp-block-gallery {
     object-fit: cover;
   }
 }
+
+.has-nested-images > figure {
+  max-width: calc(50% - .5rem);
+}
+
+.has-nested-images > figure:only-child {
+  max-width: 100% !important;
+}
+
 
 figure.wp-block-image {
   position: relative;
