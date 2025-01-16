@@ -7,6 +7,10 @@ $max-image-height: 34rem;
     font-size: 2rem;
     text-align: center;
   }
+
+  .has-nested-images > figure {
+    max-width: 100vw !important;
+  }
 }
 
 main h1 {
@@ -14,15 +18,19 @@ main h1 {
   color: $uci-blue;
   font-size: 2rem;
   font-weight: 700;
-  line-height: 3rem;
+  line-height: 5rem;
+  text-align: center;
+  // font-family: "Helvetica Condensed";
 }
 
 main h2 {
-  line-height: 2.5rem;
+  line-height: 3rem;
+  font-family: "Helvetica Condensed";
 }
 
 main h3 {
-  line-height: 2rem;
+  line-height: 2.5rem;
+  font-family: "Helvetica Condensed";
 }
 
 main hr {
@@ -79,6 +87,7 @@ figure.wp-block-gallery {
   }
 }
 
+// nested gallery images, on desktop, should not exceed 50vw width 
 .has-nested-images > figure {
   max-width: calc(50% - .5rem);
 }
