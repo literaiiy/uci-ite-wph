@@ -2,13 +2,13 @@
 
 const API_URL = "https://sites.uci.edu/irvineite/wp-json/wp/v2";
 
-export const headers = { headers: {
-  "Content-Type": "application/json",
-  "Cache-Control": "no-cache"
-}};
-
 // control cache invalidation time
 export const revalidate = 300; // 5 min
+
+export const headers = { headers: {
+  "Content-Type": "application/json",
+  "Cache-Control": `public, max-age=${revalidate}, stale-while-revalidate=${revalidate/5}`,
+}};
  
 /**
  * Gets a list of pages, ordered by the "Order" property set in Wordpress.
