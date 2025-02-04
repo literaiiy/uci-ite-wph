@@ -76,9 +76,10 @@ $hero-max-mobile: min(24rem, 50vh);
   transition: 0.25s ease-in-out;
   max-height: $hero-max;
   // object-position: 50% 50%;
+  filter: brightness(0.8);
   &:hover {
     // cursor: pointer;
-    filter: brightness(0.8);
+    filter: brightness(0.65);
   }
 }
 
@@ -91,15 +92,33 @@ $hero-max-mobile: min(24rem, 50vh);
   flex-direction: row;
   gap: 0.5rem;
   & > li {
-    width: 1rem;
-    height: 0.5rem;
-    border-radius: 10%;
+    width: 0.875rem;
+    height: 0.875rem;
+    border-radius: 50%;
     background-color: #ffffff75;
+    border: 2px solid white;
     &.slick-active {
       background-color: white;
     }
     & > button::before {
       display: none;
     }
+  }
+}
+
+.slick-arrow {
+  z-index: 100;
+}
+
+.slick-prev {
+  left: 1.5rem !important;
+  &::before {
+    font-size: 1.75rem;
+  }
+}
+.slick-next {
+  right: 1.5rem !important;
+  &::before {
+    font-size: 1.75rem;
   }
 }

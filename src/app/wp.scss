@@ -14,23 +14,25 @@ $max-image-height: 34rem;
 }
 
 main h1 {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: $uci-blue;
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 5rem;
-  text-align: center;
+  // text-align: center;
   // font-family: "Helvetica Condensed";
 }
 
 main h2 {
+  color: $uci-blue;
+  font-size: 1.75rem;
   line-height: 3rem;
-  font-family: "Helvetica Condensed";
+  // font-family: "Helvetica Condensed";
 }
 
 main h3 {
   line-height: 2.5rem;
-  font-family: "Helvetica Condensed";
+  // font-family: "Helvetica Condensed";
 }
 
 main hr {
@@ -42,6 +44,7 @@ main p {
 }
 
 main img {
+  border-radius: 1rem;
   margin: auto;
   height: auto;
   margin: 1rem auto 1rem auto;
@@ -78,10 +81,8 @@ figure.wp-block-gallery {
     max-width: 100%;
   }
   & img {
-    // max-width: 40%;
-    // width: 100%;
     height: 100%;
-
+    border-radius: 1rem;
     margin: 0;
     object-fit: cover;
   }
@@ -111,6 +112,7 @@ figcaption.wp-element-caption {
   width: 100%;
   text-align: center;
   position: absolute;
+  border-radius: 0 0 1rem 1rem;
   // right: 0;
   left: 0;
   bottom:0;

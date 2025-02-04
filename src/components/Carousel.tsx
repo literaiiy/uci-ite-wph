@@ -8,10 +8,11 @@ import Slider from 'react-slick'
 const SLICK_SETTINGS = {
   dots: true,
   infinite: true,
-  speed: 1000,
+  speed: 750,
+  arrows: true,
   slidesToShow: 1,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 4000,
   cssEase: "ease-in-out",
 }
 

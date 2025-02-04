@@ -9,7 +9,8 @@ $subheader-col: #dddddd;
 $text-col: #181818;
 $main-max: 60rem;
 $header-font: "Overpass";
-$subheader-font: "Helvetica Condensed";
+$subheader-font: "Overpass";
+$ite-font: "Helvetica Condensed";
 $mobile-cutoff: 720px;
 // $banner-height: 2rem;
 
@@ -69,7 +70,7 @@ body {
 
 main {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem 1rem;
   max-width: min(95vw, $main-max);
   width: 100%;
 }

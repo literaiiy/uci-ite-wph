@@ -1,4 +1,5 @@
 import Carousel from "@/components/Carousel";
+import Sponsors from "@/components/Sponsors";
 import "./wp.scss"
 import { getPageBySlug, getSpecificMedia } from "@/lib/api";
 
@@ -17,6 +18,7 @@ export default async function Home() {
     <main>
       <div dangerouslySetInnerHTML={{ __html: pageHtml}} />
     </main>
+    <Sponsors />
   </>
   );
 }
