@@ -26,12 +26,14 @@ main h1 {
 main h2 {
   color: $uci-blue;
   font-size: 1.75rem;
-  line-height: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   // font-family: "Helvetica Condensed";
 }
 
 main h3 {
-  line-height: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
   // font-family: "Helvetica Condensed";
 }
 
