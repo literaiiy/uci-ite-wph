@@ -22,10 +22,10 @@ export default async function Page({ params }: { params: { page: string } }) {
   )
 }
 
-export async function generateMetadata({ params }: {params: {page: string}}): Promise<Metadata> {
-  const page = await getPageBySlug(params.page);
+// export async function generateMetadata({ params }: {params: {page: string}}): Promise<Metadata> {
+//   const page = await getPageBySlug(params.page);
 
-  return {
-    title: page[0].title.rendered,
-  }
-}
+//   return {
+//     title: page[0].title.rendered,
+//   }
+// }

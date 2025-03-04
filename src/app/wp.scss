@@ -14,26 +14,25 @@ $max-image-height: 34rem;
 }
 
 main h1 {
-  // text-transform: uppercase;
   color: $uci-blue;
   font-size: 3.5rem;
+  line-height: 3.5rem;
   font-weight: 700;
-  line-height: 5rem;
-  // text-align: center;
-  // font-family: "Helvetica Condensed";
+  padding-top: 1rem;
+  // padding-bottom: 1rem;
 }
 
 main h2 {
   color: $uci-blue;
   font-size: 1.75rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: .625rem;
   // font-family: "Helvetica Condensed";
 }
 
 main h3 {
-  padding-top: 1.5rem;
-  padding-bottom: .75rem;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
   // font-family: "Helvetica Condensed";
 }
 
@@ -43,6 +42,9 @@ main hr {
 
 main p {
   padding: .75rem 0;
+  & .wp-block-verse {
+    font-style: italic;
+  }
 }
 
 main img {
