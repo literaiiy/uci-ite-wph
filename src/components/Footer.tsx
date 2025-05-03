@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import "./Footer.scss";
-import { FaInstagram, FaLinkedin, FaEnvelope, FaDiscord } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaEnvelope, FaDiscord, FaGithub } from "react-icons/fa6";
 import { getPages } from "@/lib/api";
 
 const AIRB_ADDRESS = "https://www.google.com/maps/place/Anteater+Instruction+and+Research+Building/@33.6427616,-117.8402626,17z/data=!3m2!4b1!5s0x80dcc5f1a6dec637:0xf4a403ac50ce607b!4m6!3m5!1s0x80dcde05f21338e1:0x37fff23ab5e9daa1!8m2!3d33.6427572!4d-117.8376823!16s%2Fg%2F11bwnb_831?entry=ttu";
@@ -61,6 +61,9 @@ export default async function Footer() {
             </Link>
             <Link href="https://discord.gg/bXBbMVksKj">
               <FaDiscord />
+            </Link>
+            <Link href="https://github.com/literaiiy/uci-ite-wph">
+              <FaGithub />
             </Link>
           </div>
         </div>
