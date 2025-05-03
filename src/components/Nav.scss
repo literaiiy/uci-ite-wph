@@ -1,5 +1,6 @@
 @import "../app/globals.scss";
-$mobile-navheight: 4.5rem; // needed for calculations, kinda janky
+$mobile-navheight: 4.5rem; // needed for calculations, kinda janky.
+$banner-navheight: 4.5rem; // needed for calculations, kinda janky.
 
 @media screen and (max-width: $mobile-cutoff) {
   nav {
@@ -9,7 +10,7 @@ $mobile-navheight: 4.5rem; // needed for calculations, kinda janky
   .nav-items {
     display: none;
     z-index: 100;
-    top: $mobile-navheight;
+    top: $mobile-navheight + $banner-navheight;
     position: absolute;
     flex-direction: column;
     gap: 0.5rem;

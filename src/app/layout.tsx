@@ -43,7 +43,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={defaultFont.className}>
-        {/* <Banner/> */}
+        <Banner/>
         {/* @ts-ignore */}
         <Nav pages={pages} />
         {children}
