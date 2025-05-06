@@ -56,7 +56,7 @@ export default async function Footer() {
             <Link href="https://www.linkedin.com/company/28872357">
               <FaLinkedin />
             </Link>
-            <Link href="https://www.instagram.com/ucirvine.ite/">
+            <Link href="https://www.instagram.com/ite.ucirvine/">
               <FaInstagram />
             </Link>
             <Link href="https://discord.gg/bXBbMVksKj">

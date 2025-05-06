@@ -4,8 +4,7 @@ import "./globals.scss";
 import { getPages } from "@/lib/api";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import Toast from "@/components/Toast";
-import Banner from "@/components/Banner";
+import CookieConsent from "react-cookie-consent";
 
 const defaultFont = Noto_Sans({ subsets: ["latin"] });
 const DESC = "The University of California, Irvine student chapter of the Institute of Transportation Engineers.";
@@ -30,8 +29,21 @@ export const metadata: Metadata = {
       }
     ]
   },
-
 }
+
+// const Banner = (
+//   <CookieConsent
+//     location="bottom"
+//     buttonText="Sure man!!"
+//     cookieName="myAwesomeCookieName2"
+//     style={{ background: "#2B373B" }}
+//     buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+//     expires={150}
+//   >
+//     This website uses cookies to enhance the user experience.{" "}
+//     <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>
+// </CookieConsent>
+// )
 
 export default async function RootLayout({
   children,
@@ -43,7 +55,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={defaultFont.className}>
-        <Banner/>
+        {/* {Banner} */}
         {/* @ts-ignore */}
         <Nav pages={pages} />
         {children}
