@@ -4,6 +4,7 @@ import "./globals.scss";
 import { getPages } from "@/lib/api";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import CookieConsent from "react-cookie-consent";
 
 const defaultFont = Noto_Sans({ subsets: ["latin"] });
@@ -65,6 +66,7 @@ export default async function RootLayout({
           href="http://eepurl.com/io-lgk"
         /> */}
       </body>
+      <GoogleAnalytics gaId="G-0LGBNNP5P1"/>
     </html>
   );
 }
