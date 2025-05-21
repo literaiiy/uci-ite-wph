@@ -30,10 +30,20 @@ const Sponsors = () => {
         <a href="https://ganddini.com/">
           <Image
             src="/sponsor-ganddini.svg"
-            alt="Iteris"
+            alt="Ganddini"
             height={0}
             width={0}
             style={{ width: 'auto', height: '80px' }}
+            sizes="100vw"
+          />
+        </a>
+        <a href="https://wsp.com/en-us">
+          <Image
+            src="/sponsor-wsp.png"
+            alt="WSP"
+            height={0}
+            width={0}
+            style={{ width: 'auto', height: '60px', filter: 'brightness(100)' }}
             sizes="100vw"
           />
         </a>
