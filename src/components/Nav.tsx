@@ -97,6 +97,7 @@ export default function Nav({ pages }: { pages: Page[] }) {
         <span className="sub">
           The Institute of Transportation Engineers at UC Irvine
         </span>
+
         <div
           className="menu-button"
           onClick={() => setShowNav(!showNav)}
@@ -104,6 +105,7 @@ export default function Nav({ pages }: { pages: Page[] }) {
           <MenuIcon />
         </div>
       </div>
+      <span className="banner-announcement">We are hosting the 2026 Western ITE Student Leadership Summit from Jan 23-25, 2026. <a href="https://sls.iteuci.org">Click here to learn more!</a></span>
       <div
         className="nav-items"
         style={{ display: showNav ? "flex" : "none" }}

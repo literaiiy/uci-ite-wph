@@ -1,5 +1,8 @@
 import Image from "next/image"
 import "./Sponsors.scss"
+// import sponsor_ganddini from "../lib/logos/sponsor_ganddini.svg"
+// import sponsor_iteris from "../lib/logos/sponsor_iteris.svg"
+// import sponsor_wsp from "../lib/logos/sponsor_wsp.png"
 
 const Sponsors = () => {
   return (
@@ -10,7 +13,7 @@ const Sponsors = () => {
       <div className="sponsor-list">
         <a href="https://iteris.com">
           <Image
-            src="/sponsor-iteris.svg"
+            src="/logos/sponsor_iteris.svg"
             alt="Iteris"
             height={0}
             width={0}
@@ -29,17 +32,17 @@ const Sponsors = () => {
         <span>Neelam Dorman</span>
         <a href="https://ganddini.com/">
           <Image
-            src="/sponsor-ganddini.svg"
+            src="/logos/sponsor_ganddini.svg"
             alt="Ganddini"
             height={0}
             width={0}
             style={{ width: 'auto', height: '80px' }}
-            sizes="100vw"
+            sizes="100vw" 
           />
         </a>
         <a href="https://wsp.com/en-us">
           <Image
-            src="/sponsor-wsp.png"
+            src="/logos/sponsor_wsp.png"
             alt="WSP"
             height={0}
             width={0}
