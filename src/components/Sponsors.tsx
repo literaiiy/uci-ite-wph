@@ -13,7 +13,7 @@ const Sponsors = () => {
       <div className="sponsor-list">
         <a href="https://iteris.com">
           <Image
-            src="/logos/sponsor_iteris.svg"
+            src="/logos/sponsor-iteris.svg"
             alt="Iteris"
             height={0}
             width={0}
@@ -32,7 +32,7 @@ const Sponsors = () => {
         <span>Neelam Dorman</span>
         <a href="https://ganddini.com/">
           <Image
-            src="/logos/sponsor_ganddini.svg"
+            src="/logos/sponsor-ganddini.svg"
             alt="Ganddini"
             height={0}
             width={0}
@@ -42,7 +42,7 @@ const Sponsors = () => {
         </a>
         <a href="https://wsp.com/en-us">
           <Image
-            src="/logos/sponsor_wsp.png"
+            src="/logos/sponsor-wsp.png"
             alt="WSP"
             height={0}
             width={0}
