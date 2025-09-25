@@ -11,6 +11,14 @@ $max-image-height: 34rem;
   .has-nested-images > figure {
     max-width: 100vw !important;
   }
+
+  // for mobile officers, 2 per row
+  .officers {
+    & > .wp-block-column {
+      max-width: 45vw !important;
+      flex: 1 1 45vw !important;
+    }
+  }
 }
 
 main h1 {
@@ -111,6 +119,10 @@ figure.wp-block-image {
   position: relative;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 // .wp-block-spacer {
 //   height: 1rem !important;
 // }
@@ -173,6 +185,36 @@ iframe {
 .is-content-justification-center {
   justify-content: center;
 }
+
+// Officers page
+
+.officers {
+  justify-content: center;
+  // max-height: 20rem;
+  & > .wp-block-column {
+    // height: 100%;
+    min-height: 20rem;
+    max-width: 13.5rem;
+    flex: 1 1 13.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    // background-color: lightgray;
+    box-sizing: border-box;
+  };
+}
+
+.officers figure.wp-block-gallery {
+  height: 100%;
+  max-width: 13.5rem;
+  & > img {
+    height: 100%;
+    object-fit: cover;
+    // max-height: 20rem;
+  }
+}
+
 
 // coblocks
 
