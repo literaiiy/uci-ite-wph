@@ -52,7 +52,7 @@ const Sponsors = () => {
         </a>
       </div>
     </div>
-    <p>UCI ITE relies heavily on the support of sponsors. If you would like to contribute, please contact us at <a href="mailto:internal@iteuci.org">internal@iteuci.org</a>. Thank you!</p>
+    <p>UCI ITE relies heavily on the support of sponsors. If you would like to contribute, please contact us at <a href="mailto:external@iteuci.org">external@iteuci.org</a>. Thank you!</p>
   </div>
   );
 }
