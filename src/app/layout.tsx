@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.scss";
 import { getPages } from "@/lib/api";
 import Nav from "@/components/Nav";
@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import CookieConsent from "react-cookie-consent";
 
-const defaultFont = Noto_Sans({ subsets: ["latin"] });
+const defaultFont = Open_Sans({ subsets: ["latin"] });
 const DESC = "The University of California, Irvine student chapter of the Institute of Transportation Engineers.";
 const COVER_IMG = "https://sites.uci.edu/irvineite/files/2024/06/Copy-of-DSC_0290-2.jpg";
 
@@ -31,20 +31,6 @@ export const metadata: Metadata = {
     ]
   },
 }
-
-// const Banner = (
-//   <CookieConsent
-//     location="bottom"
-//     buttonText="Sure man!!"
-//     cookieName="myAwesomeCookieName2"
-//     style={{ background: "#2B373B" }}
-//     buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-//     expires={150}
-//   >
-//     This website uses cookies to enhance the user experience.{" "}
-//     <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>
-// </CookieConsent>
-// )
 
 export default async function RootLayout({
   children,

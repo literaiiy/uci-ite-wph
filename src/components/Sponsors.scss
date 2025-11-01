@@ -30,7 +30,7 @@
 }
 
 .sponsor-box {
-  background-color: rgba(0, 0, 0, 0.15);
+  // background-color: rgba(0, 0, 0, 0.15);
   // border-radius: 1rem;
   padding: 1.5rem;
   width: 100%;
@@ -38,8 +38,19 @@
   & > h3 {
     font-family: $subheader-font;
     font-size: 1.5rem;
-    color: $subheader-col;
-    // margin-bottom: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  & > a {
+    &:hover {
+      transition: none !important;
+    }
+  }
+  & img {
+    &:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 }
 
