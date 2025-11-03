@@ -14,7 +14,7 @@ export default async function Footer() {
       <div className="info">
         <div className="address">
           <span className="info-col-head">Visit us!</span> <br />
-          Anteater Instruction & Research Building (AIRB) #4080 <br />
+          Anteater Instruction & Research Building (AIRB) #4040 <br />
           653 E Peltason Dr <br />
           Irvine, CA 92697 <br />
           <Link href={AIRB_ADDRESS}>View on Google Maps</Link>
