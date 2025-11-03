@@ -48,7 +48,7 @@ export default async function Footer() {
             />
           </div>
           <Link href="https://campusgroups.uci.edu/ite/leadership-team/">ITE on UCI CampusGroups</Link>
-          <Link href="mailto:itechapter.uci@gmail.com">itechapter.uci@gmail.com</Link>
+          <Link href="mailto:external@iteuci.org">external@iteuci.org</Link>
           <div className="social-icons">
             <Link href="http://eepurl.com/io-lgk">
               <FaEnvelope />
