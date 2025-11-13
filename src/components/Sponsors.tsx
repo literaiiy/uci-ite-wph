@@ -7,7 +7,10 @@ import "./Sponsors.scss"
 const Sponsors = () => {
   return (
   <div className="sponsors">
-    <h2 className="thanks-sponsors">Thank you to our sponsors!</h2>
+    <div className="thanks-sponsors">
+      <h2>Thank you to our sponsors!</h2>
+      <span>ITE @ UCI relies heavily on the support of sponsors. If you would like to contribute, please contact us at <a href="mailto:external@iteuci.org">external@iteuci.org</a>. Thank you!</span>
+    </div>
     <div className="sponsor-box">
       <h3>Platinum</h3>
       <div className="sponsor-list">
@@ -36,7 +39,7 @@ const Sponsors = () => {
             alt="Ganddini"
             height={0}
             width={0}
-            style={{ width: 'auto', height: '80px' }}
+            style={{ width: 'auto', height: '50px' }}
             sizes="100vw" 
           />
         </a>
@@ -46,13 +49,12 @@ const Sponsors = () => {
             alt="WSP"
             height={0}
             width={0}
-            style={{ width: 'auto', height: '60px', filter: 'brightness(100)' }}
+            style={{ width: 'auto', height: '40px', filter: 'brightness(100)' }}
             sizes="100vw"
           />
         </a>
       </div>
     </div>
-    <p>UCI ITE relies heavily on the support of sponsors. If you would like to contribute, please contact us at <a href="mailto:external@iteuci.org">external@iteuci.org</a>. Thank you!</p>
   </div>
   );
 }

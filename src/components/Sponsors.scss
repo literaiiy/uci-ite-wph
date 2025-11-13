@@ -30,11 +30,11 @@
 }
 
 .sponsor-box {
-  // background-color: rgba(0, 0, 0, 0.15);
-  // border-radius: 1rem;
-  padding: 1.5rem;
+
+  max-width: min(95vw, $main-max);
+  padding: 1rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
   & > h3 {
     font-family: $subheader-font;
     font-size: 1.5rem;
@@ -59,17 +59,26 @@
   width: 100%;
   padding: 1rem 0;
   margin-bottom: .5rem;
-  font-family: $header-font;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 800;
   text-align: center;
+  & span {
+    margin: 0.5rem 0;
+    font-size: 14px;
+    & a {
+      color: $uci-yellow !important;
+    }
+  }
+  & h2 {
+    font-family: $header-font;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
 }
 
 .sponsor-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   font-size: 1.25rem;
   gap: 1.5rem;
