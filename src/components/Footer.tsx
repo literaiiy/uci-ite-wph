@@ -22,10 +22,10 @@ export default async function Footer() {
         <div className="info-col">
           <span className="info-col-head">Learn more</span>
           <ul>
-            <li><Link href="https://www.its.uci.edu/">ITS at UCI</Link></li>
+            <li><Link href="https://sls.iteuci.org">2026 ITE Western District SLS at UCI</Link></li>
             <li><Link href="https://ite.org">ITE (International)</Link></li>
-            <li><Link href="https://westernite.org">Western ITE</Link></li>
-            <li><Link href="https://socalite.org">SoCal ITE</Link></li>
+            <li><Link href="https://westernite.org">ITE Western District</Link></li>
+            <li><Link href="https://socalite.org">ITE SoCal</Link></li>
           </ul>
         </div>
         <div className="info-col">
