@@ -18,7 +18,7 @@ export default async function Home() {
     <main>
       <div dangerouslySetInnerHTML={{ __html: pageHtml}} />
     </main>
-    <Sponsors />
+    {/* <Sponsors /> */}
   </>
   );
 }
