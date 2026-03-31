@@ -50,7 +50,7 @@ export default async function Footer() {
           <Link href="https://campusgroups.uci.edu/ite/leadership-team/">ITE on UCI CampusGroups</Link>
           <Link href="mailto:external@iteuci.org">external@iteuci.org</Link>
           <div className="social-icons">
-            <Link href="http://eepurl.com/io-lgk">
+            <Link href="https://preview.mailerlite.io/forms/2231108/183439077950883568/share">
               <FaEnvelope />
             </Link>
             <Link href="https://www.linkedin.com/company/28872357">
