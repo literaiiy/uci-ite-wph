@@ -1,6 +1,6 @@
 # `uci-ite-wph`
 
-A Next.js-based frontend for UC Irvine's Institute of Transportation Engineers student chapter website, which uses WordPress as a CMS.
+A Next.js-based frontend for UC Irvine's Institute of Transportation Engineers (ITE at UCI) student chapter website, which uses WordPress as a CMS.
 
 ## Dependency updates
 *Dependencies* are supporting software for the website’s code. Over time, they get outdated or have security holes, requiring updates. Updating them requires a terminal and basic knowledge of Git.
